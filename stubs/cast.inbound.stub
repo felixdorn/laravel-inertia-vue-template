@@ -1,0 +1,14 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Contracts\Database\Eloquent\CastsInboundAttributes;
+
+class {{ class }} implements CastsInboundAttributes
+{
+    /** Prepare the given value for storage. */
+    public function set($model, string $key, $value, array $attributes): mixed
+    {
+        return $value;
+    }
+}
