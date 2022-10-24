@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["resources/js/*"],
+            "@ziggy/*": ["vendor/tightenco/ziggy/dist/*"]
+        },
+        "types": ["vite/client"],
+        "strict": true,
+        "skipLibCheck": true,
+        "noImplicitAny": true,
+    },
+    "include": [
+        "resources/js/**/*.ts",
+        "resources/js/**/*.vue"
+    ],
+    "exclude": [
+        "node_modules",
+        "vendor"
+    ]
+}
