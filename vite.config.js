@@ -6,6 +6,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: 'resources/js/app.js',
+            ssr: "resources/js/ssr.js",
             refresh: true,
         }),
         vue({
@@ -17,4 +18,14 @@ export default defineConfig({
             },
         }),
     ],
+    resolve: {
+        alias: {
+            '@ziggy': 'vendor/tightenco/ziggy/dist'
+        }
+    },
+    build: {
+        rollupOptions: {
+            external: "./compiledZiggy.mjs"
+        }
+    },
 });
