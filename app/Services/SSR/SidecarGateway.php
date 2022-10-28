@@ -16,7 +16,7 @@ class SidecarGateway implements Gateway
         $enabled = config('inertia.ssr.enabled', false);
         $debug = config('app.debug', false);
 
-        if (!$enabled) {
+        if (! $enabled) {
             return null;
         }
 
@@ -35,7 +35,7 @@ class SidecarGateway implements Gateway
     {
         $handler = app($handler);
 
-        if (!$handler instanceof LambdaFunction) {
+        if (! $handler instanceof LambdaFunction) {
             throw new Exception('The configured Sidecar SSR Handler is not a Sidecar function.');
         }
 

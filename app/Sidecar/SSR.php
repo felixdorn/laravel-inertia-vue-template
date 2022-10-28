@@ -34,7 +34,7 @@ class SSR extends LambdaFunction
         // https://vitejs.dev/guide/ssr.html#ssr-externals
         $package->include([
             base_path('bootstrap/ssr'),
-            'node_modules'
+            'node_modules',
         ]);
 
         $this->includeZiggy($package);
@@ -51,7 +51,7 @@ class SSR extends LambdaFunction
         // Include a file called "compiledZiggy" that simply exports
         // the entire Ziggy PHP object we just serialized.
         $package->includeStrings([
-            'bootstrap/ssr/compiledZiggy.mjs' => "export default $ziggy;"
+            'bootstrap/ssr/compiledZiggy.mjs' => "export default $ziggy;",
         ]);
     }
 
@@ -69,7 +69,7 @@ class SSR extends LambdaFunction
 
         $command = ['vite', 'build', '--ssr'];
 
-        Sidecar::log('Running ' . implode(' ', $command));
+        Sidecar::log('Running '.implode(' ', $command));
 
         $process = new Process($command, $cwd = base_path(), $env = []);
 

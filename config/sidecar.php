@@ -9,7 +9,7 @@ return [
     'functions' => [
         // \App\Sidecar\RenderOgImage::class,
         // \App\Sidecar\ProcessThumbnail::class,
-        \App\Sidecar\SSR::class
+        \App\Sidecar\SSR::class,
     ],
 
     /*
