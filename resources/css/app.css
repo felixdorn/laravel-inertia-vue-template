@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* see https://github.com/inertiajs/inertia-laravel/issues/370 */
+#app { @apply h-full; }
+
