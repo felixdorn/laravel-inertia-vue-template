@@ -16,6 +16,7 @@ export default defineConfig({
                     includeAbsolute: false,
                 },
             },
+            reactivityTransform: true
         }),
     ],
     resolve: {
